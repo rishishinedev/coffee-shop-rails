@@ -31,6 +31,6 @@ class Order < ApplicationRecord
 
   def send_cofirmation_sms
     return unless status == 'paid'
-    SendMessageJob.set(wait: 30.seconds).perform_later(phone_number)
+    #SendMessageJob.set(wait: 30.seconds).perform_later(phone_number)
   end
 end
